@@ -1,0 +1,60 @@
+<?php namespace ProcessWire;
+
+use GraphQL\Type\Definition\Type;
+use GraphQL\Type\Definition\ObjectType;
+use GraphQL\Type\Definition\InputObjectType;
+use ProcessWire\Page;
+use ProcessWire\Field;
+
+class GraphQLFieldtypeColorPicker extends WireData implements Module {
+
+  /**
+   * getModuleInfo is a module required by all modules to tell ProcessWire about them
+   *
+   * @return array
+   *
+   */
+  public static function getModuleInfo() {
+
+    return array(
+
+      // The module's title, typically a little more descriptive than the class name
+      'title' => 'GraphQLFieldtypeColorPicker', 
+
+      // version number 
+      'version' => '2.0.0',
+
+      // summary is brief description of what this module is
+      'summary' => 'GraphQL support for FieldtypeColorPicker.',
+      
+      // Optional URL to more information about the module
+      'href' => 'https://github.com/somatonic/ColorPicker',
+    
+      // Optional font-awesome icon name, minus the 'fa-' part
+      // 'icon' => 'map',
+
+      'requires' => ['ProcessGraphQL']
+      );
+  }
+
+  public static function getType(Field $field)
+  {
+    return Type::string();
+  }
+
+  public static function getInputType(Field $field)
+  {
+    return new InputObjectType([
+      'name' => 'ColorPickerInput',
+      'fields' => [
+        'color' => Type::string(),
+      ],
+    ]);
+  }
+
+  public static function setValue(Page $page, Field $field, $value)
+  {
+    $fieldName = $field->name;
+    $page->$fieldName->color = $value['color'];    
+  }
+}
