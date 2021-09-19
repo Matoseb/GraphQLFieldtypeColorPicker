@@ -3,7 +3,7 @@ GraphQLFieldtypeColorPicker
 Not tested completely! Feel free to contribute
 
 This module adds GraphQL support for [FieldtypeColorPicker](https://processwire.com/modules/fieldtype-color-picker/). It is only intended for 
-use with [ProcessGraphQL][graphql] module.
+use with [ProcessGraphQL][https://github.com/dadish/ProcessGraphQL#processgraphql] module.
 
 ### Installation
 This module's files should be placed in /site/modules/GraphQLFieldtypeColorPicker/ 
