@@ -10,5 +10,5 @@ This module's files should be placed in /site/modules/GraphQLFieldtypeColorPicke
 [How to install or uninstall modules](http://modules.processwire.com/install-uninstall/)
 
 ### Usage
-Everything works behind the scenes for this module. After you installed it, FieldtypeMapMarker 
+Everything works behind the scenes for this module. After you installed it, FieldtypeColorPicker 
 fields will be available in your GraphQL api.
