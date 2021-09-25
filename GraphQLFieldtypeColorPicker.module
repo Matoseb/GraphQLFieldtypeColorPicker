@@ -28,7 +28,7 @@ class GraphQLFieldtypeColorPicker extends WireData implements Module {
       'summary' => 'GraphQL support for FieldtypeColorPicker.',
       
       // Optional URL to more information about the module
-      'href' => 'https://github.com/somatonic/ColorPicker',
+      'href' => 'https://github.com/Matoseb/GraphQLFieldtypeColorPicker',
     
       // Optional font-awesome icon name, minus the 'fa-' part
       // 'icon' => 'map',
